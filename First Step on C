@@ -1,0 +1,89 @@
+/*Apprendre les bases du langage C*/
+/* Learning the basics of the C language */
+
+#include <stdio.h> 
+/*N'oubliez surtout pas de mettre ça au départ de n'importe quel
+code que vous allez faire. C'est la bibliothèque de BASE de C. 
+Sans ça, impossible de coder*/
+/* Make sure to include this at the beginning of any
+code you're going to write. This is the basic C library.
+Without it, coding is impossible. */
+
+#define max 50
+/*#define permet de définir des constantes. Ici Max=50*/
+/* #define is used to define constants. Here Max=50 */
+
+int main(){
+/*C'est tout simplement ce qui permet de commencer à coder, une sorte de début de programme, par la suite il sera possible
+de remplir les parenthèses etc.. mais nous voyons les bases des bases actuellement*/
+/* This is simply what allows you to start coding, a kind of program start. 
+Later, you will be able to fill in the parentheses, etc., but we're looking at the very basics for now */
+
+
+/*
+int : entier
+float : réel
+char : chaine de caratère
+...
+C'est tout simplement le type de variable.
+à introduire dans la zone qui va suivre
+*/
+/*
+int: integer
+float: real number
+char: character string
+...
+These are simply the variable types.
+To be introduced in the area that follows
+*/
+
+int nombre_un, nombre_deux;  /*N'oubliez pas les ; après chaque commande !!*//* Don't forget the ; after each command! */
+float resultat;
+
+/*Maintenant, nous allons voir deux choses assez essentielles*/
+/* Now, we'll see two quite essential things */
+printf("Donnez deux nombres a additionner (en format 'nombre, nombre')"); 
+/*printf sert à sortir quelque chose dans le terminal tout simplement, ce qui va permettre de remplir des variables*/
+/* printf is used to output something to the terminal, which will allow us to fill variables */
+scanf("%d, %d", &nombre_un, &nombre_deux);
+    /*%d=récupérer nombre entier, &f=récupérer nombre réel*/ /*& devant une variable sert à la remplir par la valeur prise par %d*/
+    /* %d = retrieve integer, %f = retrieve real number. 
+& before a variable is used to fill it with the value taken by %d */
+
+/*on réalise l'addition dans une autre variable :*/
+/* We perform the addition in another variable: */
+resultat = nombre_un + nombre_deux;
+
+/*et on donne le résultat :*/
+/* And we give the result: */
+printf("Voici votre resultat : %f ", resultat);
+/*Ici on ne met pas le & car resultat possède déjà sa valeur et on veut la sortir pas la rentrer. */
+/* Here we don't use & because result already has its value and we want to output it, not input it. */
+
+return 0;
+/*pas obligatoire pour le moment mais utile pour des fonctions/procédures, pour l'instant sert plus à faire comprendre que le programme est fini.*/
+/* Not mandatory for now but useful for functions/procedures, for now it serves more to indicate that the program is finished. */
+}
+
+/*maintenant dans le terminal il faut compiler le fichier pour cela :
+gcc 'nom-du-fichier.c' -o 'nom-du-fichier.exe'
+Après avoir fait ça si tout est bon pas de message d'erreur.
+Et ensuite : .\'nom-du-fichier.exe'
+*/
+
+/*N'oubliez pas qu'à chaque modification, il faut recompiler : gcc 'nom-du-fichier.c' -o 'nom-du-fichier.exe' pour mettre le fichier à jour et ensuite l'exécuter :
+.\'nom-du-fichier.exe' */
+
+/* Vous connaissez maintenant les petites petites bases de C, je ferai d'autres tutos plus tard notamment les boucles, les tableaux et les enregistrements prochainement.*/
+
+/* Now in the terminal, you need to compile the file for that:
+gcc 'file-name.c' -o 'file-name.exe'
+After doing this, if everything is fine, there will be no error message.
+Then: .\'file-name.exe'
+*/
+
+/* Remember that after each modification, you need to recompile: gcc 'file-name.c' -o 'file-name.exe' 
+to update the file and then execute it:
+.\'file-name.exe' */
+
+/* You now know the very basics of C. I will do more tutorials later, including loops, arrays, and records soon. */
